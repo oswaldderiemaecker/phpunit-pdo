@@ -9,6 +9,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
+	sleep 5;
         $this->pdo = new PDO($GLOBALS['db_type'].":host=localhost", $GLOBALS['db_username'], $GLOBALS['db_password']);
 
         $this->pdo->query("CREATE DATABASE hello_world_test");
